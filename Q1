@@ -1,0 +1,25 @@
+package Selenium;
+
+import org.apache.logging.log4j.core.util.WatchManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class q1jat9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+        WebDriverManager.firefoxdriver().setup();
+        
+        WebDriver driver = new FirefoxDriver();
+        driver.manage().window().maximize();
+        driver.navigate().to("https://www.google.com");
+        System.out.println("Current URL: " + driver.getCurrentUrl());
+        driver.navigate().refresh();
+        driver.quit();
+	}
+
+}
