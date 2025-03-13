@@ -1,0 +1,31 @@
+package Selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ById;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class q2jat9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 WebDriverManager.chromedriver().setup();
+	        
+	        WebDriver driver = new ChromeDriver();
+	        
+	        driver.navigate().to("https://www.demoblaze.com/");
+	        driver.manage().window().maximize();
+	        driver.findElement(By.id("nava"));
+	        
+	        String myelement = driver.getTitle();
+	        	              
+	        if (myelement.equals("STORE")) {
+                System.out.println("Page landed on correct website");
+            } else {
+                System.out.println("Page not landed on correct website");
+            }
+	}
+
+}
